@@ -1,0 +1,20 @@
+1719721313850	geckodriver	INFO	Listening on 127.0.0.1:62957
+1719721315946	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62958" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Gabriel\\AppData\\Local\\Temp\\rust_mozprofilemrCWLN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1719721316395	Marionette	INFO	Marionette enabled
+1719721316701	Marionette	INFO	Listening on port 62967
+WebDriver BiDi listening on ws://127.0.0.1:62958
+Read port: 62967
+1719721316963	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62958/devtools/browser/7b621382-5563-41a1-86c3-392d418803b2
+JavaScript error: https://www.cartoriodetaguatinga.com.br/, line 955: ChunkLoadError: Loading chunk 9839 failed.
+(error: https://static.parastorage.com/services/wix-thunderbolt/dist/9839.f7183e67.chunk.min.js)
+JavaScript warning: https://static.parastorage.com/services/wix-thunderbolt/dist/passwordProtectedPage.f58235c3.chunk.min.js, line 1: unreachable code after return statement
+1719721347574	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://static.parastorage.com/services/wix-perf-measure/1.1095.0/wix-perf-measure.umd.min.js, line 1: Script terminated by timeout at:
+t@https://static.parastorage.com/services/wix-perf-measure/1.1095.0/wix-perf-measure.umd.min.js:1:2855
+
+1719721418357	Marionette	INFO	Stopped listening on port 62967
+Dynamically enable window occlusion 1

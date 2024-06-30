@@ -1,0 +1,26 @@
+1719722025400	geckodriver	INFO	Listening on 127.0.0.1:63200
+1719722027453	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Gabriel\\AppData\\Local\\Temp\\rust_mozprofilepZebza"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1719722028222	Marionette	INFO	Marionette enabled
+1719722028544	Marionette	INFO	Listening on port 63208
+WebDriver BiDi listening on ws://127.0.0.1:63201
+Read port: 63208
+1719722028782	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63201/devtools/browser/daf71d84-74dc-4e9c-89f8-429746018351
+JavaScript error: https://cdn-zap-ssr-prod.zapimoveis.com.br/_next/static/chunks/549-ede3fc9260e8525b.js, line 1: TimeoutError: Request timed out after 2000ms
+JavaScript error: https://cdn-zap-ssr-prod.zapimoveis.com.br/_next/static/chunks/549-ede3fc9260e8525b.js, line 1: Error: Error when trying fetch
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VKtwqYIMw_jEtcsYEdk2t0uWx1X5nCbHNvrRSJpikmk.js line 2 > eval line 624 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1719722058244	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://gum.criteo.com/syncframe?topUrl=www.zapimoveis.com.br&origin=onetag#{%22bundle%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22cw%22:true,%22optout%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22origin%22:%22onetag%22,%22sid%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22tld%22:%22zapimoveis.com.br%22,%22topUrl%22:%22www.zapimoveis.com.br%22,%22version%22:%225_26_0%22,%22ifa%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22lsw%22:true,%22pm%22:0}, line 13: Script terminated by timeout at:
+r.prototype.flushEventQueue@https://gum.criteo.com/syncframe?topUrl=www.zapimoveis.com.br&origin=onetag#{%22bundle%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22cw%22:true,%22optout%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22origin%22:%22onetag%22,%22sid%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22tld%22:%22zapimoveis.com.br%22,%22topUrl%22:%22www.zapimoveis.com.br%22,%22version%22:%225_26_0%22,%22ifa%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22lsw%22:true,%22pm%22:0}:13:3137
+r/<@https://gum.criteo.com/syncframe?topUrl=www.zapimoveis.com.br&origin=onetag#{%22bundle%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22cw%22:true,%22optout%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22origin%22:%22onetag%22,%22sid%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22tld%22:%22zapimoveis.com.br%22,%22topUrl%22:%22www.zapimoveis.com.br%22,%22version%22:%225_26_0%22,%22ifa%22:{%22identifierExtractor%22:{%22origin%22:0},%22value%22:null},%22lsw%22:true,%22pm%22:0}:13:3642
+
+JavaScript warning: https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/, line 21: Script terminated by timeout at:
+nrWrapper@https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/:21:25023
+
+1719722182119	Marionette	INFO	Stopped listening on port 63208
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.

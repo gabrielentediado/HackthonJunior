@@ -1,0 +1,37 @@
+1719722803987	geckodriver	INFO	Listening on 127.0.0.1:63537
+1719722806007	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63538" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Gabriel\\AppData\\Local\\Temp\\rust_mozprofilegnNxni"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1719722806427	Marionette	INFO	Marionette enabled
+1719722806687	Marionette	INFO	Listening on port 63545
+WebDriver BiDi listening on ws://127.0.0.1:63538
+Read port: 63545
+1719722806907	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63538/devtools/browser/411726bd-1f17-4027-8c33-2b3108b99cad
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3, line 359: Script terminated by timeout at:
+Ao@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:359:365
+yo@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:356:69
+Co@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:356:478
+oF@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:536:23
+yG@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:567:36
+ca.ym@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:573:413
+ca.xm/</<@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:571:104
+Yl@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:310:405
+im@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:313:432
+ca.xm/<@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:571:90
+c@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:431:169
+Mt@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:432:269
+ca.xm@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:571:76
+c@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:585:717
+nn@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:325:1
+mn.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:327:278
+mn.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:325:395
+en@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:322:764
+qH/<@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:586:178
+ca.Hk/<@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:531:126
+ca.Hk/c/<@https://www.googletagmanager.com/gtag/js?id=G-SP7M9MSCB3:530:420
+nrWrapper@https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/:21:25173
+
+1719722816747	Marionette	INFO	Stopped listening on port 63545
+Dynamically enable window occlusion 1
