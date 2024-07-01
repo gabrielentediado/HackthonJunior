@@ -7,24 +7,21 @@ Library    DatabaseLibrary        #Banco de dados
 *** Variables ***
 #Variaveis de URLS
 ${cartorio}    https://www.cartoriodetaguatinga.com.br/
-${imoveis}    https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/
+${imoveis_1}    https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/
 ${imoveis_2}    https://www.vivareal.com.br/
-
+${browser}    firefox
 ${p_serviços}    //*[@id="comp-ihjax7ir1label"]
 ${div_notariado} //*[@id="comp-ihjax7irmoreContainer"]
 
-#variaveis banco de dados
+${titulos_apartamentos}    //*@class=["l-text l-u-color-neutral-28 -text--variant-heading-small l-text--weight-medium card__address"]
 
-#${DBHost}          localhost
-#${DBName}          my_database
-#${DBUser}          my_user
-#${DBPass}          my_password
-#${DBPort}          5432
+${preços}    //*[@class="l-text l-u-color-neutral-28 l-text--variant-heading-small l-text--weight-bold undefined"]
 
 #arquivo
 ${OUTPUT_FILE}   dados.txt
 
 *** Keywords ***
+
 #Abrir o site 1
 1- abrir cartorio
     Open Browser    ${cartorio}    firefox
@@ -43,21 +40,27 @@ e pegar info
 
 #Abrir o site 2
 1- abrir imoveis
-    Open Browser     ${imoveis}    firefox
+    Open Browser     ${imoveis_1}    firefox
 
 e pegar preços
     ${count} =    Get Element Count    name:$
 
-    FOR    {i}    IN RANGE    ${count}
-        ${minha_string}    Get Text    //div[@class="listing-price"]
-        Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
+    FOR    {i}    IN RANGE    1    ${count}
 
-    #${resultado}    Evaluate    ${minha_string}.rfind('$') + 1
+        ${minha_string}    Get Text    ${preços}
+        Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
+        {i}+1 
+
     
+e pegar nomes imoveis
+    ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
+    Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis} 
+    
+
 #abrir o site 3 
 
 1- imoveis_2 
-    Open Browser     ${imoveis_2}    firefox
+    Open Browser     ${imoveis_2}    ${browser}   
 
 #fechar global
 fechar 
@@ -66,7 +69,7 @@ fechar
 *** Test Cases ***
 
 cenario 1
-    [tags] cartorio
+    [tags]  cartorio
     1- abrir cartorio
     2- clicar serviços
     e pegar info 1
@@ -77,7 +80,11 @@ cenario 2
     [tags]  imovel
     1- abrir imoveis
     e pegar preços
+    e pegar nomes imoveis
+    fechar
 
 cenario 3
-    [tags] imoveis_2
+    [tags]  imoveis_2
+
     1-abrir imoveis_2
+    fechar
