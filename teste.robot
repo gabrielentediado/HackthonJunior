@@ -45,15 +45,22 @@ e pegar info
 e pegar preços
     ${count} =    Get Element Count    name:$
 
-    FOR    {i}    IN RANGE    1    ${count}
-        LOG TO CONSOLE    ${i}
+    FOR    {i}    IN RANGE    1    ${count}    
+        LOG TO CONSOLE    ${i}    
         ${minha_string}    Get Text    ${preços}
         Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
     END
     
 e pegar nomes imoveis
-    ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
-    Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis} 
+    
+    ${count}=    Get Element Count    data-cy:card__address       
+
+    FOR    {I}    IN RANGE    1    ${count_2}
+      
+        ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
+        Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis} 
+    
+    END
     
 
 #abrir o site 3 
