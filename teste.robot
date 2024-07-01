@@ -46,11 +46,10 @@ e pegar preços
     ${count} =    Get Element Count    name:$
 
     FOR    {i}    IN RANGE    1    ${count}
-
+        LOG TO CONSOLE    ${i}
         ${minha_string}    Get Text    ${preços}
         Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
-        {i}+1 
-
+    END
     
 e pegar nomes imoveis
     ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
