@@ -50,6 +50,10 @@ e pegar preços
         ${minha_string}    Get Text    ${preços}
         Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
     END
+
+#fechar global
+fechar 
+    Close Browser
     
 e pegar nomes imoveis
     
@@ -67,10 +71,6 @@ e pegar nomes imoveis
 
 1- imoveis_2 
     Open Browser     ${imoveis_2}    ${browser}   
-
-#fechar global
-fechar 
-    Close Browser
 
 *** Test Cases ***
 
