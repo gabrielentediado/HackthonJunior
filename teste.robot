@@ -53,7 +53,7 @@ e pegar preços
     
 e pegar nomes imoveis
     
-    ${count}=    Get Element Count    data-cy:card__address       
+    ${count_2}=    Get Element Count    data-cy:card__address       
 
     FOR    {I}    IN RANGE    1    ${count_2}
       
