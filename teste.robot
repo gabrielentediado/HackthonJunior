@@ -61,7 +61,7 @@ e pegar nomes imoveis
     FOR    {I}    IN RANGE    1    ${count_2}
       
         ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
-        Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis} 
+        Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis}\n
     
     END
     
