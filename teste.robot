@@ -10,25 +10,32 @@ ${cartorio}    https://www.cartoriodetaguatinga.com.br/
 ${imoveis_1}    https://www.zapimoveis.com.br/venda/imoveis/df+brasilia/
 ${imoveis_2}    https://www.vivareal.com.br/
 ${browser}    firefox
+
 ${p_serviços}    //*[@id="comp-ihjax7ir1label"]
-${div_notariado} //*[@id="comp-ihjax7irmoreContainer"]
 
-${titulos_apartamentos}    //*@class=["l-text l-u-color-neutral-28 -text--variant-heading-small l-text--weight-medium card__address"]
+${cartorio_informacoes}    xpath=//*[@class="wixui-rich-text__text"]
 
-${preços}    //*[@class="l-text l-u-color-neutral-28 l-text--variant-heading-small l-text--weight-bold undefined"]
+${cartorio_informacoes_2}    xpath=//*[@class="wixui-rich-text__text"]
+
+${titulos_apartamentos}    xpath=//*[@class="l-text l-u-color-neutral-28 -text--variant-heading-small l-text--weight-medium card__address"]
+
+${preços}    xpath=//*[@class="l-text l-u-color-neutral-28 l-text--variant-heading-small l-text--weight-bold undefined"]
+
+${metragem}    xpath=//*[@class="l-text l-u-color-neutral-28 l-text--variant-body-small l-text--weight-regular card__amenity"]
 
 #arquivo
 ${OUTPUT_FILE}   dados.txt
 
 *** Keywords ***
 
+#fechar global
 fechar 
     Close Browser
-    
+
 #Abrir o site 1
 1- abrir cartorio
     Open Browser    ${cartorio}    firefox
-
+    
 #Clicar
 2- clicar serviços
 
@@ -37,8 +44,14 @@ fechar
     Append To File   ${OUTPUT_FILE}    Titulo: ${title}\n
 
 e pegar info    
-    ${header_text0}=    Get Text    ${div_notariado} 
-    Append To File    ${OUTPUT_FILE}    E-notoriado ${header_text0}\n
+    ${header_text0}=    Get Text    ${cartorio_informacoes} 
+    Append To File    ${OUTPUT_FILE}    Informações Cartório ${header_text0}\n
+    Log    Data saved to file: ${OUTPUT_FILE}
+
+e pegar info_2
+    
+    ${header_text0}=    Get Text    ${cartorio_informacoes_2} 
+    Append To File    ${OUTPUT_FILE}    Informações Cartório ${header_text0}\n
     Log    Data saved to file: ${OUTPUT_FILE}
 
 
@@ -54,17 +67,26 @@ e pegar preços
         ${minha_string}    Get Text    ${preços}
         Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
     END
+    
 e pegar nomes imoveis
     
-    ${count_2}=    Get Element Count    data-cy:card__address       
+    ${count_2}=    Get Element Count    ${titulos_apartamentos}     
 
-    FOR    {I}    IN RANGE    1    ${count_2}
+    FOR    {i}    IN RANGE    1    ${count_2}
       
         ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
-        Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis}\n
+        Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis}\n 
     
     END
+
+e pegar metros
     
+    ${count_3}=    Get Element Count    ${metragem}            
+
+    FOR    {i}    IN RANGE    1    ${count_3}    
+        ${metros}    Get Text    ${metragem}
+        Append To file    ${OUTPUT_FILE}    Apartamentos: ${metragem}         
+    END
 
 #abrir o site 3 
 
@@ -77,7 +99,7 @@ cenario 1
     [tags]  cartorio
     1- abrir cartorio
     2- clicar serviços
-    e pegar info 1
+    e pegar info
    
     fechar
 
@@ -91,5 +113,5 @@ cenario 2
 cenario 3
     [tags]  imoveis_2
 
-    1-abrir imoveis_2
+    1- imoveis_2 
     fechar
