@@ -22,9 +22,13 @@ ${OUTPUT_FILE}   dados.txt
 
 *** Keywords ***
 
+fechar 
+    Close Browser
+    
 #Abrir o site 1
 1- abrir cartorio
     Open Browser    ${cartorio}    firefox
+
 #Clicar
 2- clicar serviços
 
@@ -50,11 +54,6 @@ e pegar preços
         ${minha_string}    Get Text    ${preços}
         Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
     END
-
-#fechar global
-fechar 
-    Close Browser
-    
 e pegar nomes imoveis
     
     ${count_2}=    Get Element Count    data-cy:card__address       
