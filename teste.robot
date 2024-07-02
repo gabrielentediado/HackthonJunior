@@ -60,21 +60,21 @@ e pegar info_2
     Open Browser     ${imoveis_1}    firefox
 
 e pegar preços
-    ${count} =    Get Element Count    name:$
 
-    FOR    {i}    IN RANGE    1    ${count}    
-        LOG TO CONSOLE    ${i}    
-        ${minha_string}    Get Text    ${preços}
-        Append To File   ${OUTPUT_FILE}    Preços: ${minha_string}\n
+    ${count}=    Get Element Count    //div[@class="listing-price"]
+
+    FOR    ${i}    IN RANGE    ${count}
+        ${preco}=    Get Text    (//div[@class="listing-price"])[${i+1}]
+        Append To File   ${OUTPUT_FILE}    Preços: ${preco}\n
     END
-    
+
 e pegar nomes imoveis
     
     ${count_2}=    Get Element Count    ${titulos_apartamentos}     
 
-    FOR    {i}    IN RANGE    1    ${count_2}
+    FOR    ${i}    IN RANGE    ${count_2}
       
-        ${titulos_imoveis}    Get Text    ${titulos_apartamentos}
+        ${titulos_imoveis}=    Get Text    ${titulos_apartamentos}[${i+1}]
         Append To file    ${OUTPUT_FILE}    Apartamentos: ${titulos_imoveis}\n 
     
     END
@@ -83,9 +83,9 @@ e pegar metros
     
     ${count_3}=    Get Element Count    ${metragem}            
 
-    FOR    {i}    IN RANGE    1    ${count_3}    
-        ${metros}    Get Text    ${metragem}
-        Append To file    ${OUTPUT_FILE}    Apartamentos: ${metragem}         
+    FOR    {i}    IN RANGE    ${count_3}    
+        ${metros}=    Get Text    ${metragem}[${i+1}]
+        Append To file    ${OUTPUT_FILE}    Apartamentos: ${metragem}\n         
     END
 
 #abrir o site 3 
