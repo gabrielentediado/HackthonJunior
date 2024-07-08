@@ -1,7 +1,7 @@
 # Passo 1º instalar Python
 https://www.python.org/downloads/
 
-# Passo 2º instalar depedencias
+# Passo 2º instalar dependências
 pip install robotframework
 pip install robotframework-seleniumlibrary
 
